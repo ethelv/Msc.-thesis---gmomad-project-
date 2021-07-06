@@ -83,3 +83,20 @@ plot( y, r_sq_syn, ylim = c(0, 1), xlab = "sample size", ylab = "r-squared", typ
 lines(y, r_sq_mis, type="b", col="green",lwd=1, pch=19)
 lines(y_lof, r_sq_lof, type="b", col="blue",lwd=1, pch=19)
 legend("bottomright",  legend = c("syn", "miss", "lof"), lty=c(1,1),col = c("red", "green", "blue"))
+
+             
+#plot all types of variants----
+# Autosomes
+plot( y, r_sq_syn, ylim = c(0, 1), xlab = "sample size", ylab = expression(paste("R"^"2")), type="b", col="red",lwd=1, pch=19 , xlim = c(0,800000),
+      main = "Correlation Between the Sexes\n Autosomes")
+lines(y, r_sq_mis, type="b", col="green",lwd=1, pch=19)
+lines(y_lof, r_sq_lof, type="b", col="blue",lwd=1, pch=19)
+legend("bottomright",  legend = c("synonymous", "missense", "Lof"), lty=c(1,1),col = c("red", "green", "blue"))
+
+# X chromosome
+plot( y_x, r_sq_syn_x, ylim = c(0, 1), xlab = "sample size", ylab = expression(paste("R"^"2")), type="b", col="red",lwd=1, pch=19 , xlim = c(0,26000),
+      main = "Correlation Between the Sexes\n X Chromosome")
+lines(y_x, r_sq_mis_x, type="b", col="green",lwd=1, pch=19)
+lines(y_lof_x, r_sq_lof_x, type="b", col="blue",lwd=1, pch=19)
+legend("bottomright",  legend = c("synonymous", "missense", "Lof"), lty=c(1,1),col = c("red", "green", "blue"))
+
