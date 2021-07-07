@@ -134,7 +134,7 @@ lof_X.f <- lof_X[l1>10,]
 
 lof_X_fisher_res<- fisher_fun(lof_X.f)
 
-# Fisher Test of non-synonymous/synonymous
+
 
 
 
